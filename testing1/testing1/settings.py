@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for housingprice project
+# Scrapy settings for testing1 project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -8,13 +8,6 @@
 #     https://doc.scrapy.org/en/latest/topics/settings.html
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
-
-BOT_NAME = 'housingprice'
-
-
-SPIDER_MODULES = ['housingprice.spiders']
-NEWSPIDER_MODULE = 'housingprice.spiders'
-COOKIES_ENABLED = False
 
 CONCURRENT_REQUESTS_PER_DOMAIN = 1
 RETRY_TIMES = 0
@@ -33,24 +26,20 @@ DOWNLOADER_MIDDLEWARES = {
     'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware': None,
 }
 
-DOWNLOAD_DELAY = 5
-CONCURRENT_REQUESTS = 5
+BOT_NAME = 'testing1'
+
+SPIDER_MODULES = ['testing1.spiders']
+NEWSPIDER_MODULE = 'testing1.spiders'
+
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'housingprice (+http://www.yourdomain.com)'
+#USER_AGENT = 'testing1 (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = False
+ROBOTSTXT_OBEY = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
-
-
-USER_AGENTS = [
-    "Mozilla/4.0 (compatible; MSIE 4.01; Mac_PowerPC)",
-    "MMozilla/4.0 (compatible; MSIE 5.5b1; Mac_PowerPC)",
-    "Mozilla/5.0 (Macintosh; U; PPC; en-US; mimic; rv:9.3.3) Clecko/20120101 Classilla/CFM",
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1.2 Safari/605.1.15"
-    ]
 
 # Configure a delay for requests for the same website (default: 0)
 # See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
@@ -75,13 +64,13 @@ USER_AGENTS = [
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'housingprice.middlewares.HousingpriceSpiderMiddleware': 543,
+#    'testing1.middlewares.Testing1SpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'housingprice.middlewares.HousingpriceDownloaderMiddleware': 543,
+#    'testing1.middlewares.Testing1DownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -93,7 +82,7 @@ USER_AGENTS = [
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'housingprice.pipelines.HousingpricePipeline': 300,
+#    'testing1.pipelines.Testing1Pipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
